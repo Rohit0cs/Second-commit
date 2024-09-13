@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS FLIP CARD</title>
+	<style> 
+	.maincontainer{
+		position: relative;
+		width:250px;
+		height:320px;
+/*		background: green;*/
+		align-content: center;
+	}
+	.thecard{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transition: all 0.5s ease;
+/*		background: yellow;*/
+	}
+	.thecard:hover{
+		transform: rotateY(180deg);
+	}
+	.thefront{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		background: #ffc728;
+		color: #333;
+		text-align: center;
+		font-family: 'zilla slab', sans-serif;
+		border-radius: 20px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.theback{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		background: #5fcf80;
+		color: #fff;
+		transform: rotateY(180deg);
+		text-align: center;
+		font-family: 'zilla slab', sans-serif;
+		border-radius: 20px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+
+		<center><div class="maincontainer">
+			<div class="thecard">
+				<div class="thefront"> front of card<br>
+					my name is the rohit.
+				</div>
+				<div class="theback">back of card<br>
+					my friends are everyone.</div>
+			</div>
+		</div></center>
+
+</body>
+</html>
